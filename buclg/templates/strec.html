@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Record</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+
+        .head {
+            margin: 0px;
+            padding: 0.5px;
+            text-align: center;
+            background-color: rgb(121, 255, 161);
+            /* border-radius: 50px; */
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        .nav {
+            margin: 0px;
+            padding: 10px;
+            font-size: larger;
+            font-weight: bolder;
+            /* border-bottom: 5px;
+            border-style:solid ; */
+            text-indent: 10px;
+            background-color: aqua;
+
+
+        }
+
+        /* unvisited link */
+        a:link {
+            color: rgb(0, 0, 0);
+        }
+
+        /* visited link */
+        a:visited {
+            color: green;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+
+        a {
+            text-decoration: none;
+            padding-left: 10px;
+        }
+
+
+        .heading {
+            text-align: center;
+            text-decoration: double;
+            text-indent: 20px;
+            font-size: larger;
+            font-weight: bolder;
+
+        }
+
+        table,
+        th,
+        td {
+            border: 3px solid black;
+        }
+
+        .table {
+            text-align: center;
+            font-weight: bold;
+            padding: 3px;
+            background-position: center;
+            max-height: max-content;
+            /* background-image: url("logo.jpg");
+            background-repeat: no-repeat;
+            background-size: auto; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+
+        <h1>Barkatullah University Institute Of Technology</h1>
+    </div>
+    <div class="nav">
+
+        <a href="/home"><b>Home</b></a>
+        {% comment %} <a href="/strec"><b>Student Records </b></a> {% endcomment %}
+        <a href="/newstudent"><b>Newstudent</b></a>
+        <a href="/attendance"><b>Attendance</b></a>
+        <a href="/fees"><b>Fees</b></a>
+        <a href="profile.html"><b>Profile</b></a> 
+        <a href="/about"><b>About Us</b></a>
+        <a href="/loginuser"><b>Login</b></a>
+        <!-- <a href="about.html"><b>Contact Us</b></a> -->
+
+
+    </div>
+    <div class="heading">
+
+        <h1>Student Records</h1>
+    </div>
+
+    <div class="table">
+        <center>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Semester</th>
+                    <th>Email Id</th>
+                    <th>Contact</th>
+                    <th>Address</th>
+
+                </tr>
+
+                <tr>
+                    <td>Pihu</td>
+                    <td>CSE</td>
+                    <td>4th</td>
+                    <td>Pihu@gmail.com</td>
+                    <td>8976685442</td>
+                    <td>H.no.86,roek sin,pickshow,newyork</td>
+                </tr>
+
+                <tr>
+                    <td>Bishu</td>
+                    <td>CSE</td>
+                    <td>4th</td>
+                    <td>bishu@gmail.com</td>
+                    <td>8975585562</td>
+                    <td>Gwalior..👮‍♀️👮‍♀️</td>
+                </tr>
+
+                <tr>
+                    <td>Meera</td>
+                    <td>CSE</td>
+                    <td>4th</td>
+                    <td>Meera@gmail.com</td>
+                    <td>8974565419</td>
+                    <td>Apni Dhun me...😊😊</td>
+                </tr>
+
+                <tr>
+                    <td>Kashish</td>
+                    <td>CSE</td>
+                    <td>4th</td>
+                    <td>kashish@gmail.com</td>
+                    <td>9972785692</td>
+                    <td>Bhaiyo ke dil me...💖💖</td>
+                </tr>
+
+                <tr>
+                    <td>Kartiky</td>
+                    <td>CSE</td>
+                    <td>4th</td>
+                    <td>Kartiky@gmail.com</td>
+                    <td>9972785692</td>
+                    <td>khoawo me, Pr kiske... 🤔🤔</td>
+                </tr>
+
+
+            </table>
+        </center>
+    </div>
+
+</body>
+
+</html>

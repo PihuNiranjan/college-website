@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .head {
+            margin: 0px;
+            padding: 0.5px;
+            text-align: center;
+            background-color: rgb(121, 255, 161);
+            /* border-radius: 50px; */
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        .nav {
+            margin: 0px;
+            padding: 15px 15px;
+            font-size: larger;
+            font-weight: bolder;
+            text-indent: 10px;
+            background-color: aqua;
+
+
+        }
+
+        /* unvisited link */
+        a:link {
+            color: rgb(0, 0, 0);
+        }
+
+        /* visited link */
+        a:visited {
+            color: green;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+
+        a {
+            text-decoration: none;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+
+        <h1>Barkatullah University Institute Of Technology</h1>
+    </div>
+    <div class="nav">
+
+        <a href="/home"><b>Home</b></a>
+        <!-- <a href="/strec"><b>Student Records </b></a>  -->
+        <a href="/newstudent"><b>Record</b></a>
+        <a href="/attendance"><b>Attendance</b></a>
+        <a href="/fees"><b>Fees</b></a>
+        <a href="/profile"><b>Profile</b></a> 
+        <a href="/about"><b>About Us</b></a>
+        <a href="/loginuser"><b>Login</b></a>
+        
+    </div>
+    <h1 style="text-align: center;">Welcome {{request.user}}</h1>
+    <h1 style="text-align: center;">Email : {{user.email}}</h1>
+    <h1 style="text-align: center;">Name : {{user.get_full_name}}</h1>
+    <h1 style="text-align: center;">last login : {{ user.last_login }}</h1>
+
+</body>
+</html>

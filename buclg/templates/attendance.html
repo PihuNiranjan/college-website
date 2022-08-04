@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+
+        *,
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            -moz-osx-font-smoothing: grayscale;
+            margin: 0;
+            padding: 0;
+        }
+
+        .head {
+            margin: 0px;
+            padding: 20px;
+            text-align: center;
+            background-color: rgb(121, 255, 161);
+            /* border-radius: 50px; */
+            font-weight: bolder;
+            font-size: 20px;
+        }
+
+        .nav {
+            margin: 0px;
+            padding: 15px 15px;
+            font-size: larger;
+            font-weight: bolder;
+            text-indent: 10px;
+            background-color: aqua;
+
+
+        }
+
+        /* unvisited link */
+        a:link {
+            color: rgb(0, 0, 0);
+        }
+
+        /* visited link */
+        a:visited {
+            color: green;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+
+        a {
+            text-decoration: none;
+            padding-left: 10px;
+        }
+
+        h1 {
+            display: inline-block;
+        }
+
+        html,
+        body {
+            height: 100%;
+            background-color: #cbf5cf;
+            overflow: hidden;
+        }
+
+
+        .form-holder {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 15vh;
+        }
+
+        .form-holder .form-content {
+            position: relative;
+            text-align: center;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-align-items: center;
+            align-items: center;
+            padding: 60px;
+        }
+
+        .form-content .form-items {
+            border: 3px solid rgb(13, 13, 13);
+            background-color: #495056;
+            padding: 70px;
+            display: inline-block;
+            width: 100%;
+            min-width: 660px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            text-align: left;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+        }
+
+        .form-content h3 {
+            color: rgb(0, 0, 0);
+            text-align: left;
+            font-size: 45px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .form-content h3.form-title {
+            margin-bottom: 30px;
+        }
+
+        .form-content p {
+            color: rgb(13, 12, 12);
+            text-align: left;
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 20px;
+            margin-bottom: 30px;
+        }
+
+
+        .form-content label,
+        .was-validated .form-check-input:invalid~.form-check-label,
+        .was-validated .form-check-input:valid~.form-check-label {
+            color: rgb(0, 0, 0);
+        }
+
+        .form-content input[type=text],
+        .form-content input[type=password],
+        .form-content input[type=email],
+        .form-content select {
+            width: 100%;
+            padding: 9px 20px;
+            text-align: left;
+            border: 0;
+            outline: 0;
+            border-radius: 6px;
+            background-color: #fff;
+            font-size: 25px;
+            font-weight: 300;
+            color: #000000;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            margin-top: 16px;
+        }
+
+
+        .btn-primary {
+            background-color: #f2f5f9;
+            outline: none;
+            padding: 10px 62px;
+            margin-top: 12px;
+            font-size: 30px;
+            font-weight: bolder;
+            border: 2px solid black;
+            box-shadow: none;
+            border-radius: 5px;
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active {
+            background-color: #8fe2a4;
+            outline: none !important;
+            border: none !important;
+            box-shadow: none;
+        }
+
+        .form-content textarea {
+            position: static !important;
+            width: 100%;
+            padding: 8px 20px;
+            border-radius: 6px;
+            text-align: left;
+            background-color: #fff;
+            border: 0;
+            font-size: 15px;
+            font-weight: 300;
+            color: #000000;
+            outline: none;
+            resize: none;
+            height: 120px;
+            -webkit-transition: none;
+            transition: none;
+            margin-bottom: 14px;
+        }
+
+        .form-content textarea:hover,
+        .form-content textarea:focus {
+            border: 0;
+            background-color: #0c0c0d;
+            color: #000000;
+        }
+
+        .mv-up {
+            margin-top: -9px !important;
+            margin-bottom: 8px !important;
+        }
+
+        .invalid-feedback {
+            color: #fb081c;
+        }
+
+        .valid-feedback {
+            color: #14ea86;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="head">
+
+        <h1><b> Barkatullah University Institute Of Technology </b></h1>
+    </div>
+    <div class="nav">
+
+        <a href="/home"><b>Home</b></a>
+        <!-- <a href="/strec"><b>Student Records </b></a> -->
+        <a href="/newstudent"><b>Record</b></a>
+        <a href="/attendance"><b>Attendance</b></a>
+        <a href="/fees"><b>Fees</b></a>
+        <a href="/profile"><b>Profile</b></a>
+        <a href="/about"><b>About Us</b></a>
+        <a href="/loginuser"><b>Login</b></a>
+    </div>
+
+
+    <div class="form-body">
+        <div class="row">
+            <div class="form-holder">
+                <div class="form-content">
+                    <div class="form-items">
+                        <h3>Attendance</h3>
+                        <p>Fill in the data below.</p>
+                        <form class="requires-validation" method="post" action="/attenddata" novalidate>
+                            {% csrf_token %}
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="name" placeholder="Full Name" required>
+                                <div class="valid-feedback">Username field is valid!</div>
+                                <div class="invalid-feedback">Username field cannot be blank!</div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="branch" placeholder="Branch Name"
+                                    required>
+                                <div class="valid-feedback">Branch field is valid!</div>
+                                <div class="invalid-feedback">Branch field cannot be blank!</div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="sem" placeholder="Semester" required>
+                                <div class="valid-feedback">Semester field is valid!</div>
+                                <div class="invalid-feedback">Semester field cannot be blank!</div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <input class="form-control" type="text" name="position"
+                                    placeholder="Enter Your Post    e.g. Student / Staff / Other " required>
+                                <div class="valid-feedback">Post field is valid!</div>
+                                <div class="invalid-feedback">Post field cannot be blank!</div>
+                            </div>
+
+
+
+
+                            <div class="form-button mt-3">
+                                <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
