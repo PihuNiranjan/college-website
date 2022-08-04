@@ -1,2 +1,2 @@
-# django
-Some Django project.
+# College Website
+My college website clone
