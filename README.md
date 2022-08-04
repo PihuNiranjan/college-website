@@ -1,0 +1,2 @@
+# django
+Some Django project.
